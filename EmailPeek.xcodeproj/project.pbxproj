@@ -1,0 +1,684 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6DB09260417AFD4235A6EAE8 /* libPods-EmailPeek.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EC39D2BE480213A7FE99BCF /* libPods-EmailPeek.a */; };
+		834E2A691ABB32B000FC31DF /* UIColor+Office365.m in Sources */ = {isa = PBXBuildFile; fileRef = 834E2A681ABB32B000FC31DF /* UIColor+Office365.m */; };
+		834E2A6C1ABB6D1E00FC31DF /* ConversationFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 834E2A6B1ABB6D1E00FC31DF /* ConversationFilter.m */; };
+		834E2A6F1ABB6DED00FC31DF /* SenderFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 834E2A6E1ABB6DED00FC31DF /* SenderFilter.m */; };
+		834E2A721ABB71DA00FC31DF /* UnreadFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 834E2A711ABB71DA00FC31DF /* UnreadFilter.m */; };
+		834E2A751ABB725E00FC31DF /* ImportanceFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 834E2A741ABB725E00FC31DF /* ImportanceFilter.m */; };
+		834E2A781ABCCEE200FC31DF /* NSDate+Office365.m in Sources */ = {isa = PBXBuildFile; fileRef = 834E2A771ABCCEE200FC31DF /* NSDate+Office365.m */; };
+		834E2A7B1ABF4A0200FC31DF /* NothingFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 834E2A7A1ABF4A0200FC31DF /* NothingFilter.m */; };
+		834E2AE71AC4E1EC00FC31DF /* about.html in Resources */ = {isa = PBXBuildFile; fileRef = 834E2AE61AC4E1EC00FC31DF /* about.html */; };
+		8369ED4B1AB78A0A00B0B7BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8369ED4A1AB78A0A00B0B7BA /* main.m */; };
+		8369ED591AB78A0A00B0B7BA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8369ED581AB78A0A00B0B7BA /* Images.xcassets */; };
+		8369ED681AB78A0A00B0B7BA /* EmailPeekTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8369ED671AB78A0A00B0B7BA /* EmailPeekTests.m */; };
+		838C38DF1AB791F4001C8621 /* SettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 838C38D81AB791F4001C8621 /* SettingsManager.m */; };
+		838C38E01AB791F4001C8621 /* ConversationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 838C38DA1AB791F4001C8621 /* ConversationManager.m */; };
+		838C38E11AB791F4001C8621 /* Conversation.m in Sources */ = {isa = PBXBuildFile; fileRef = 838C38DC1AB791F4001C8621 /* Conversation.m */; };
+		838C38E21AB791F4001C8621 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 838C38DE1AB791F4001C8621 /* Message.m */; };
+		838C38F51AB7925D001C8621 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 838C38EB1AB7925D001C8621 /* SettingsViewController.m */; };
+		838C38F61AB7925D001C8621 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 838C38ED1AB7925D001C8621 /* MessageViewController.m */; };
+		838C38F71AB7925D001C8621 /* ConversationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 838C38EF1AB7925D001C8621 /* ConversationViewController.m */; };
+		838C38F81AB7925D001C8621 /* ConversationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 838C38F11AB7925D001C8621 /* ConversationListViewController.m */; };
+		838C38F91AB7925D001C8621 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 838C38F31AB7925D001C8621 /* AppDelegate.m */; };
+		838C38FD1AB79276001C8621 /* MessagePreviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 838C38FB1AB79276001C8621 /* MessagePreviewCell.m */; };
+		838C38FE1AB79276001C8621 /* MessagePreviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 838C38FC1AB79276001C8621 /* MessagePreviewCell.xib */; };
+		838C39001AB79289001C8621 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 838C38FF1AB79289001C8621 /* Main.storyboard */; };
+		838C39031AB793FC001C8621 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 838C39021AB793FC001C8621 /* AboutViewController.m */; };
+		838C39061AB7B807001C8621 /* SenderFilterListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 838C39051AB7B807001C8621 /* SenderFilterListViewController.m */; };
+		838C39091AB7B826001C8621 /* ConversationFilterListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 838C39081AB7B826001C8621 /* ConversationFilterListViewController.m */; };
+		838C390C1AB86967001C8621 /* Office365Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 838C390B1AB86967001C8621 /* Office365Client.m */; };
+		838C39151AB9EE5F001C8621 /* EmailAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 838C39141AB9EE5F001C8621 /* EmailAddress.m */; };
+		838C39181AB9F187001C8621 /* Office365ObjectTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 838C39171AB9F187001C8621 /* Office365ObjectTransformer.m */; };
+		838C391B1AB9F7EB001C8621 /* MessageAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 838C391A1AB9F7EB001C8621 /* MessageAttachment.m */; };
+		838C39211AB9FE99001C8621 /* MessageDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 838C39201AB9FE99001C8621 /* MessageDetail.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8369ED621AB78A0A00B0B7BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8369ED3D1AB78A0A00B0B7BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8369ED441AB78A0A00B0B7BA;
+			remoteInfo = EmailPeek;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0B991E1A227BF5F476B2D6A1 /* Pods-EmailPeek.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmailPeek.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmailPeek/Pods-EmailPeek.release.xcconfig"; sourceTree = "<group>"; };
+		675690E2EC24D565145A4ACB /* Pods-EmailPeek.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmailPeek.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmailPeek/Pods-EmailPeek.debug.xcconfig"; sourceTree = "<group>"; };
+		6EC39D2BE480213A7FE99BCF /* libPods-EmailPeek.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EmailPeek.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		834E2A671ABB32B000FC31DF /* UIColor+Office365.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Office365.h"; sourceTree = "<group>"; };
+		834E2A681ABB32B000FC31DF /* UIColor+Office365.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Office365.m"; sourceTree = "<group>"; };
+		834E2A6A1ABB6D1E00FC31DF /* ConversationFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationFilter.h; sourceTree = "<group>"; };
+		834E2A6B1ABB6D1E00FC31DF /* ConversationFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ConversationFilter.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		834E2A6D1ABB6DED00FC31DF /* SenderFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SenderFilter.h; sourceTree = "<group>"; };
+		834E2A6E1ABB6DED00FC31DF /* SenderFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SenderFilter.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		834E2A701ABB71DA00FC31DF /* UnreadFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnreadFilter.h; sourceTree = "<group>"; };
+		834E2A711ABB71DA00FC31DF /* UnreadFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = UnreadFilter.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		834E2A731ABB725E00FC31DF /* ImportanceFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImportanceFilter.h; sourceTree = "<group>"; };
+		834E2A741ABB725E00FC31DF /* ImportanceFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ImportanceFilter.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		834E2A761ABCCEE200FC31DF /* NSDate+Office365.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Office365.h"; sourceTree = "<group>"; };
+		834E2A771ABCCEE200FC31DF /* NSDate+Office365.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Office365.m"; sourceTree = "<group>"; };
+		834E2A791ABF4A0200FC31DF /* NothingFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NothingFilter.h; sourceTree = "<group>"; };
+		834E2A7A1ABF4A0200FC31DF /* NothingFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NothingFilter.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		834E2AE61AC4E1EC00FC31DF /* about.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = about.html; sourceTree = "<group>"; };
+		8369ED451AB78A0A00B0B7BA /* EmailPeek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmailPeek.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8369ED491AB78A0A00B0B7BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8369ED4A1AB78A0A00B0B7BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8369ED581AB78A0A00B0B7BA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8369ED611AB78A0A00B0B7BA /* EmailPeekTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmailPeekTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8369ED661AB78A0A00B0B7BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8369ED671AB78A0A00B0B7BA /* EmailPeekTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmailPeekTests.m; sourceTree = "<group>"; };
+		838C38D71AB791F4001C8621 /* SettingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SettingsManager.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		838C38D81AB791F4001C8621 /* SettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SettingsManager.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		838C38D91AB791F4001C8621 /* ConversationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationManager.h; sourceTree = "<group>"; };
+		838C38DA1AB791F4001C8621 /* ConversationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ConversationManager.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		838C38DB1AB791F4001C8621 /* Conversation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Conversation.h; sourceTree = "<group>"; };
+		838C38DC1AB791F4001C8621 /* Conversation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Conversation.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		838C38DD1AB791F4001C8621 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Message.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		838C38DE1AB791F4001C8621 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Message.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		838C38E41AB79209001C8621 /* MessageFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = MessageFilter.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		838C38EB1AB7925D001C8621 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SettingsViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		838C38EC1AB7925D001C8621 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		838C38ED1AB7925D001C8621 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		838C38EE1AB7925D001C8621 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		838C38EF1AB7925D001C8621 /* ConversationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationViewController.m; sourceTree = "<group>"; };
+		838C38F01AB7925D001C8621 /* ConversationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationViewController.h; sourceTree = "<group>"; };
+		838C38F11AB7925D001C8621 /* ConversationListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationListViewController.m; sourceTree = "<group>"; };
+		838C38F21AB7925D001C8621 /* ConversationListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationListViewController.h; sourceTree = "<group>"; };
+		838C38F31AB7925D001C8621 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		838C38F41AB7925D001C8621 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		838C38FA1AB79276001C8621 /* MessagePreviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagePreviewCell.h; sourceTree = "<group>"; };
+		838C38FB1AB79276001C8621 /* MessagePreviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagePreviewCell.m; sourceTree = "<group>"; };
+		838C38FC1AB79276001C8621 /* MessagePreviewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessagePreviewCell.xib; sourceTree = "<group>"; };
+		838C38FF1AB79289001C8621 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		838C39011AB793FC001C8621 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		838C39021AB793FC001C8621 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		838C39041AB7B807001C8621 /* SenderFilterListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SenderFilterListViewController.h; sourceTree = "<group>"; };
+		838C39051AB7B807001C8621 /* SenderFilterListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SenderFilterListViewController.m; sourceTree = "<group>"; };
+		838C39071AB7B826001C8621 /* ConversationFilterListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationFilterListViewController.h; sourceTree = "<group>"; };
+		838C39081AB7B826001C8621 /* ConversationFilterListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationFilterListViewController.m; sourceTree = "<group>"; };
+		838C390A1AB86967001C8621 /* Office365Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Office365Client.h; sourceTree = "<group>"; };
+		838C390B1AB86967001C8621 /* Office365Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Office365Client.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		838C39131AB9EE5F001C8621 /* EmailAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailAddress.h; sourceTree = "<group>"; };
+		838C39141AB9EE5F001C8621 /* EmailAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailAddress.m; sourceTree = "<group>"; };
+		838C39161AB9F187001C8621 /* Office365ObjectTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Office365ObjectTransformer.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		838C39171AB9F187001C8621 /* Office365ObjectTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Office365ObjectTransformer.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		838C39191AB9F7EB001C8621 /* MessageAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageAttachment.h; sourceTree = "<group>"; };
+		838C391A1AB9F7EB001C8621 /* MessageAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageAttachment.m; sourceTree = "<group>"; };
+		838C391F1AB9FE99001C8621 /* MessageDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageDetail.h; sourceTree = "<group>"; };
+		838C39201AB9FE99001C8621 /* MessageDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageDetail.m; sourceTree = "<group>"; };
+		838C39231ABA10DE001C8621 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		838C39261ABB0D47001C8621 /* MessagePreview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = MessagePreview.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8369ED421AB78A0A00B0B7BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DB09260417AFD4235A6EAE8 /* libPods-EmailPeek.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8369ED5E1AB78A0A00B0B7BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4B01FDD84855D4A0B47AA641 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6EC39D2BE480213A7FE99BCF /* libPods-EmailPeek.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8369ED3C1AB78A0A00B0B7BA = {
+			isa = PBXGroup;
+			children = (
+				838C39231ABA10DE001C8621 /* README.md */,
+				8369ED471AB78A0A00B0B7BA /* EmailPeek */,
+				8369ED641AB78A0A00B0B7BA /* EmailPeekTests */,
+				8369ED461AB78A0A00B0B7BA /* Products */,
+				8562CEFD7C018871B80E1EC6 /* Pods */,
+				4B01FDD84855D4A0B47AA641 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8369ED461AB78A0A00B0B7BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8369ED451AB78A0A00B0B7BA /* EmailPeek.app */,
+				8369ED611AB78A0A00B0B7BA /* EmailPeekTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8369ED471AB78A0A00B0B7BA /* EmailPeek */ = {
+			isa = PBXGroup;
+			children = (
+				83B373C71AC9B08700397D9D /* Helpers */,
+				838C38D41AB791D0001C8621 /* Models */,
+				838C38D51AB791D6001C8621 /* Controllers */,
+				838C38D61AB791E2001C8621 /* Views */,
+				8369ED481AB78A0A00B0B7BA /* Supporting Files */,
+			);
+			path = EmailPeek;
+			sourceTree = "<group>";
+		};
+		8369ED481AB78A0A00B0B7BA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				834E2AE61AC4E1EC00FC31DF /* about.html */,
+				8369ED581AB78A0A00B0B7BA /* Images.xcassets */,
+				8369ED491AB78A0A00B0B7BA /* Info.plist */,
+				8369ED4A1AB78A0A00B0B7BA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8369ED641AB78A0A00B0B7BA /* EmailPeekTests */ = {
+			isa = PBXGroup;
+			children = (
+				8369ED671AB78A0A00B0B7BA /* EmailPeekTests.m */,
+				8369ED651AB78A0A00B0B7BA /* Supporting Files */,
+			);
+			path = EmailPeekTests;
+			sourceTree = "<group>";
+		};
+		8369ED651AB78A0A00B0B7BA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8369ED661AB78A0A00B0B7BA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		838C38D41AB791D0001C8621 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				838C39251ABA7A9E001C8621 /* Office365 Helpers */,
+				838C38D91AB791F4001C8621 /* ConversationManager.h */,
+				838C38DA1AB791F4001C8621 /* ConversationManager.m */,
+				838C38D71AB791F4001C8621 /* SettingsManager.h */,
+				838C38D81AB791F4001C8621 /* SettingsManager.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		838C38D51AB791D6001C8621 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				838C38F41AB7925D001C8621 /* AppDelegate.h */,
+				838C38F31AB7925D001C8621 /* AppDelegate.m */,
+				838C38F21AB7925D001C8621 /* ConversationListViewController.h */,
+				838C38F11AB7925D001C8621 /* ConversationListViewController.m */,
+				838C38F01AB7925D001C8621 /* ConversationViewController.h */,
+				838C38EF1AB7925D001C8621 /* ConversationViewController.m */,
+				838C38EE1AB7925D001C8621 /* MessageViewController.h */,
+				838C38ED1AB7925D001C8621 /* MessageViewController.m */,
+				838C38EC1AB7925D001C8621 /* SettingsViewController.h */,
+				838C38EB1AB7925D001C8621 /* SettingsViewController.m */,
+				838C39011AB793FC001C8621 /* AboutViewController.h */,
+				838C39021AB793FC001C8621 /* AboutViewController.m */,
+				838C39041AB7B807001C8621 /* SenderFilterListViewController.h */,
+				838C39051AB7B807001C8621 /* SenderFilterListViewController.m */,
+				838C39071AB7B826001C8621 /* ConversationFilterListViewController.h */,
+				838C39081AB7B826001C8621 /* ConversationFilterListViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		838C38D61AB791E2001C8621 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				838C38FF1AB79289001C8621 /* Main.storyboard */,
+				838C38FA1AB79276001C8621 /* MessagePreviewCell.h */,
+				838C38FB1AB79276001C8621 /* MessagePreviewCell.m */,
+				838C38FC1AB79276001C8621 /* MessagePreviewCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		838C38E31AB791FC001C8621 /* Office365 Server Side Filters */ = {
+			isa = PBXGroup;
+			children = (
+				838C38E41AB79209001C8621 /* MessageFilter.h */,
+				834E2A6D1ABB6DED00FC31DF /* SenderFilter.h */,
+				834E2A6E1ABB6DED00FC31DF /* SenderFilter.m */,
+				834E2A6A1ABB6D1E00FC31DF /* ConversationFilter.h */,
+				834E2A6B1ABB6D1E00FC31DF /* ConversationFilter.m */,
+				834E2A701ABB71DA00FC31DF /* UnreadFilter.h */,
+				834E2A711ABB71DA00FC31DF /* UnreadFilter.m */,
+				834E2A731ABB725E00FC31DF /* ImportanceFilter.h */,
+				834E2A741ABB725E00FC31DF /* ImportanceFilter.m */,
+				834E2A791ABF4A0200FC31DF /* NothingFilter.h */,
+				834E2A7A1ABF4A0200FC31DF /* NothingFilter.m */,
+			);
+			name = "Office365 Server Side Filters";
+			sourceTree = "<group>";
+		};
+		838C39221ABA0ECD001C8621 /* Domain Entities */ = {
+			isa = PBXGroup;
+			children = (
+				838C39261ABB0D47001C8621 /* MessagePreview.h */,
+				838C38DD1AB791F4001C8621 /* Message.h */,
+				838C38DE1AB791F4001C8621 /* Message.m */,
+				838C391F1AB9FE99001C8621 /* MessageDetail.h */,
+				838C39201AB9FE99001C8621 /* MessageDetail.m */,
+				838C38DB1AB791F4001C8621 /* Conversation.h */,
+				838C38DC1AB791F4001C8621 /* Conversation.m */,
+				838C39131AB9EE5F001C8621 /* EmailAddress.h */,
+				838C39141AB9EE5F001C8621 /* EmailAddress.m */,
+				838C39191AB9F7EB001C8621 /* MessageAttachment.h */,
+				838C391A1AB9F7EB001C8621 /* MessageAttachment.m */,
+			);
+			name = "Domain Entities";
+			sourceTree = "<group>";
+		};
+		838C39251ABA7A9E001C8621 /* Office365 Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				838C390A1AB86967001C8621 /* Office365Client.h */,
+				838C390B1AB86967001C8621 /* Office365Client.m */,
+				838C39161AB9F187001C8621 /* Office365ObjectTransformer.h */,
+				838C39171AB9F187001C8621 /* Office365ObjectTransformer.m */,
+				838C39221ABA0ECD001C8621 /* Domain Entities */,
+				838C38E31AB791FC001C8621 /* Office365 Server Side Filters */,
+			);
+			name = "Office365 Helpers";
+			sourceTree = "<group>";
+		};
+		83B373C71AC9B08700397D9D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				834E2A671ABB32B000FC31DF /* UIColor+Office365.h */,
+				834E2A681ABB32B000FC31DF /* UIColor+Office365.m */,
+				834E2A761ABCCEE200FC31DF /* NSDate+Office365.h */,
+				834E2A771ABCCEE200FC31DF /* NSDate+Office365.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		8562CEFD7C018871B80E1EC6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				675690E2EC24D565145A4ACB /* Pods-EmailPeek.debug.xcconfig */,
+				0B991E1A227BF5F476B2D6A1 /* Pods-EmailPeek.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8369ED441AB78A0A00B0B7BA /* EmailPeek */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8369ED6B1AB78A0A00B0B7BA /* Build configuration list for PBXNativeTarget "EmailPeek" */;
+			buildPhases = (
+				687E5B5C65F4846FD6EDC188 /* Check Pods Manifest.lock */,
+				8369ED411AB78A0A00B0B7BA /* Sources */,
+				8369ED421AB78A0A00B0B7BA /* Frameworks */,
+				8369ED431AB78A0A00B0B7BA /* Resources */,
+				555B2DDFE4542FE8BBAD7199 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EmailPeek;
+			productName = EmailPeek;
+			productReference = 8369ED451AB78A0A00B0B7BA /* EmailPeek.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8369ED601AB78A0A00B0B7BA /* EmailPeekTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8369ED6E1AB78A0A00B0B7BA /* Build configuration list for PBXNativeTarget "EmailPeekTests" */;
+			buildPhases = (
+				8369ED5D1AB78A0A00B0B7BA /* Sources */,
+				8369ED5E1AB78A0A00B0B7BA /* Frameworks */,
+				8369ED5F1AB78A0A00B0B7BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8369ED631AB78A0A00B0B7BA /* PBXTargetDependency */,
+			);
+			name = EmailPeekTests;
+			productName = EmailPeekTests;
+			productReference = 8369ED611AB78A0A00B0B7BA /* EmailPeekTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8369ED3D1AB78A0A00B0B7BA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = Microsoft;
+				TargetAttributes = {
+					8369ED441AB78A0A00B0B7BA = {
+						CreatedOnToolsVersion = 6.2;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					8369ED601AB78A0A00B0B7BA = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 8369ED441AB78A0A00B0B7BA;
+					};
+				};
+			};
+			buildConfigurationList = 8369ED401AB78A0A00B0B7BA /* Build configuration list for PBXProject "EmailPeek" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8369ED3C1AB78A0A00B0B7BA;
+			productRefGroup = 8369ED461AB78A0A00B0B7BA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8369ED441AB78A0A00B0B7BA /* EmailPeek */,
+				8369ED601AB78A0A00B0B7BA /* EmailPeekTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8369ED431AB78A0A00B0B7BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				838C38FE1AB79276001C8621 /* MessagePreviewCell.xib in Resources */,
+				8369ED591AB78A0A00B0B7BA /* Images.xcassets in Resources */,
+				834E2AE71AC4E1EC00FC31DF /* about.html in Resources */,
+				838C39001AB79289001C8621 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8369ED5F1AB78A0A00B0B7BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		555B2DDFE4542FE8BBAD7199 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EmailPeek/Pods-EmailPeek-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		687E5B5C65F4846FD6EDC188 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8369ED411AB78A0A00B0B7BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				834E2A781ABCCEE200FC31DF /* NSDate+Office365.m in Sources */,
+				838C391B1AB9F7EB001C8621 /* MessageAttachment.m in Sources */,
+				838C39181AB9F187001C8621 /* Office365ObjectTransformer.m in Sources */,
+				834E2A721ABB71DA00FC31DF /* UnreadFilter.m in Sources */,
+				838C38E21AB791F4001C8621 /* Message.m in Sources */,
+				838C38DF1AB791F4001C8621 /* SettingsManager.m in Sources */,
+				834E2A691ABB32B000FC31DF /* UIColor+Office365.m in Sources */,
+				838C38F51AB7925D001C8621 /* SettingsViewController.m in Sources */,
+				8369ED4B1AB78A0A00B0B7BA /* main.m in Sources */,
+				838C38E01AB791F4001C8621 /* ConversationManager.m in Sources */,
+				838C38F81AB7925D001C8621 /* ConversationListViewController.m in Sources */,
+				838C39061AB7B807001C8621 /* SenderFilterListViewController.m in Sources */,
+				838C38F61AB7925D001C8621 /* MessageViewController.m in Sources */,
+				838C38F91AB7925D001C8621 /* AppDelegate.m in Sources */,
+				838C39031AB793FC001C8621 /* AboutViewController.m in Sources */,
+				834E2A6C1ABB6D1E00FC31DF /* ConversationFilter.m in Sources */,
+				838C38E11AB791F4001C8621 /* Conversation.m in Sources */,
+				838C39211AB9FE99001C8621 /* MessageDetail.m in Sources */,
+				838C39151AB9EE5F001C8621 /* EmailAddress.m in Sources */,
+				834E2A7B1ABF4A0200FC31DF /* NothingFilter.m in Sources */,
+				838C39091AB7B826001C8621 /* ConversationFilterListViewController.m in Sources */,
+				834E2A6F1ABB6DED00FC31DF /* SenderFilter.m in Sources */,
+				834E2A751ABB725E00FC31DF /* ImportanceFilter.m in Sources */,
+				838C390C1AB86967001C8621 /* Office365Client.m in Sources */,
+				838C38F71AB7925D001C8621 /* ConversationViewController.m in Sources */,
+				838C38FD1AB79276001C8621 /* MessagePreviewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8369ED5D1AB78A0A00B0B7BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8369ED681AB78A0A00B0B7BA /* EmailPeekTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8369ED631AB78A0A00B0B7BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8369ED441AB78A0A00B0B7BA /* EmailPeek */;
+			targetProxy = 8369ED621AB78A0A00B0B7BA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8369ED691AB78A0A00B0B7BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8369ED6A1AB78A0A00B0B7BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8369ED6C1AB78A0A00B0B7BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 675690E2EC24D565145A4ACB /* Pods-EmailPeek.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = EmailPeek/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8369ED6D1AB78A0A00B0B7BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B991E1A227BF5F476B2D6A1 /* Pods-EmailPeek.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = EmailPeek/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8369ED6F1AB78A0A00B0B7BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EmailPeekTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EmailPeek.app/EmailPeek";
+			};
+			name = Debug;
+		};
+		8369ED701AB78A0A00B0B7BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EmailPeekTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EmailPeek.app/EmailPeek";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8369ED401AB78A0A00B0B7BA /* Build configuration list for PBXProject "EmailPeek" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8369ED691AB78A0A00B0B7BA /* Debug */,
+				8369ED6A1AB78A0A00B0B7BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8369ED6B1AB78A0A00B0B7BA /* Build configuration list for PBXNativeTarget "EmailPeek" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8369ED6C1AB78A0A00B0B7BA /* Debug */,
+				8369ED6D1AB78A0A00B0B7BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8369ED6E1AB78A0A00B0B7BA /* Build configuration list for PBXNativeTarget "EmailPeekTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8369ED6F1AB78A0A00B0B7BA /* Debug */,
+				8369ED701AB78A0A00B0B7BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8369ED3D1AB78A0A00B0B7BA /* Project object */;
+}
