@@ -49,9 +49,9 @@ If the install and setup are successful, you should see the message **Setup comp
 The Email Peek app already contains a podfile that will get the Office 365 and ADAL components (pods) into your project. It's located in the sample root ("Podfile"). The example shows the contents of the file.
 
 target ‘O365-iOS-EmailPeek’ do
-pod 'ADALiOS', '~> 1.0.0'   # 1.0.0 < ver < 1.1.0
-pod 'Office365/Outlook', '~> 0.9.0'
-pod 'Office365/Discovery', '~> 0.9.0'
+pod 'ADALIOS',   '~> 1.2.1'
+pod 'Office365/Outlook', '= 0.9.0'
+pod 'Office365/Discovery', '= 0.9.0'
 end
 
 
