@@ -81,14 +81,13 @@ Note: You should receive confirmation that these dependencies have been added to
 
 Finally you'll need to add the Client ID and Redirect Uri you recorded from the previous section **Register your app with Microsoft Azure**.
 
-Browse the **O365-iOS-EmailPeek** project directory and open up the workspace (O365-EmailPeek-iOS.xcworkspace). In the **AuthenticationManager.m** file you'll see that the **ClientID** and **RedirectUri** values can be added to the top of the file. Supply the necessary values in this file.
+Browse the **O365-iOS-EmailPeek** project directory and open up the workspace (O365-EmailPeek-iOS.xcworkspace). In the **AppDelegate.m** file you'll see that the **ClientID** and **RedirectUri** values can be added to the top of the file. Supply the necessary values in this file.
 
 // You will set your application's clientId and redirect URI. You get
 // these when you register your application in Azure AD.
-static NSString * const REDIRECT_URL_STRING = @"ENTER_REDIRECT_URI_HERE";
-static NSString * const CLIENT_ID           = @"ENTER_CLIENT_ID_HERE";
-static NSString * const AUTHORITY           = @"https://login.microsoftonline.com/common";
-
+static NSString * const kClientId           = @"ENTER_REDIRECT_URI_HERE";
+static NSString * const kRedirectURLString  = @"ENTER_CLIENT_ID_HERE";
+static NSString * const kAuthorityURLString = @"https://login.microsoftonline.com/common";
 
 
 
