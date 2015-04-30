@@ -374,6 +374,7 @@
 				TargetAttributes = {
 					8369ED441AB78A0A00B0B7BA = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = A856C7QQ48;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -595,6 +596,7 @@
 			baseConfigurationReference = 675690E2EC24D565145A4ACB /* Pods-EmailPeek.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: jason kim (4FLAPD7HAX)";
 				INFOPLIST_FILE = EmailPeek/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -607,6 +609,7 @@
 			baseConfigurationReference = 0B991E1A227BF5F476B2D6A1 /* Pods-EmailPeek.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: jason kim (4FLAPD7HAX)";
 				INFOPLIST_FILE = EmailPeek/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

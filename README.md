@@ -72,7 +72,7 @@ Note: You should receive confirmation that these dependencies have been added to
 7.	Select the arrow icon on the lower-right corner of the page.
 8.	On the Application information page, specify a Redirect URI, for this example, you can specify http://localhost/emailpeek, and then select the check box in the lower-right hand corner of the page. Remember this value for the section **Get the ClientID and RedirectUri into the project**.
 9.	Once the application has been successfully added, you will be taken to the Quick Start page for the application. Select Configure in the top menu.
-10.	Under **permissions to other applications**, add the following permission: **Add the Office 365 Exchange Online application**, and select **Read users' mail**, **Read and write access to users' mail**, and **Send mail as a user** permissions.
+10.	Under **permissions to other applications**, add the following permission: **Add the Office 365 Exchange Online application**, and select **Read and write user mail**, and **Send mail as a user** permissions.
 13.	Copy the value specified for **Client ID** on the **Configure** page. Remember this value for the section **Getting the ClientID and RedirectUri into the project**.
 14.	Select **Save** in the bottom menu.
 
