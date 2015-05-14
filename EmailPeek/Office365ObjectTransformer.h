@@ -8,21 +8,21 @@
 @class Message;
 @class MessageDetail;
 @class EmailAddress;
-@class MSOutlookServicesMessage;
-@class MSOutlookServicesRecipient;
+@class MSOutlookMessage;
+@class MSOutlookRecipient;
 
 extern NSString * const MessageCategoryIsReadOnClient;
 extern NSString * const MessageCategoryIsHiddenOnClient;
 
 @interface Office365ObjectTransformer : NSObject
 
-// Convert from MSOutlookServicesMessage to Message
+// Convert from MSOutlookMessage to Message
 - (NSString *)outlookMessageFieldsForMessage;
-- (Message *)messageFromOutlookMessage:(MSOutlookServicesMessage *)outlookMessage;
+- (Message *)messageFromOutlookMessage:(MSOutlookMessage *)outlookMessage;
 - (NSArray *)messagesFromOutlookMessages:(NSArray *)outlookMessages;
 
 - (NSString *)outlookMessageFieldsForMessageDetail;
-- (MessageDetail *)messageDetailFromOutlookMessage:(MSOutlookServicesMessage *)outlookMessage;
+- (MessageDetail *)messageDetailFromOutlookMessage:(MSOutlookMessage *)outlookMessage;
 
 @end
 

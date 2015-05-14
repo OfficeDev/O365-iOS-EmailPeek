@@ -9,18 +9,18 @@
 #import "MessageDetail.h"
 #import "MessageAttachment.h"
 
-#import "MSOutlookServicesMessage.h"
-#import "MSOutlookServicesItemBody.h"
-#import "MSOutlookServicesRecipient.h"
-#import "MSOutlookServicesEmailAddress.h"
-#import "MSOutlookServicesAttachment.h"
+#import "MSOutlookMessage.h"
+#import "MSOutlookItemBody.h"
+#import "MSOutlookRecipient.h"
+#import "MSOutlookEmailAddress.h"
+#import "MSOutlookAttachment.h"
 
 NSString * const MessageCategoryIsReadOnClient   = @"EmailPeek - Read";
 NSString * const MessageCategoryIsHiddenOnClient = @"EmailPeek - Hidden";
 
 @implementation Office365ObjectTransformer
 
-// Convert from MSOutlookServicesMessage to Message
+// Convert from MSOutlookMessage to Message
 #pragma mark - Message
 // Ignored fields
 //   * $$__ODataType
@@ -51,7 +51,7 @@ NSString * const MessageCategoryIsHiddenOnClient = @"EmailPeek - Hidden";
               @"Categories"] componentsJoinedByString:@","];
 }
 
-- (Message *)messageFromOutlookMessage:(MSOutlookServicesMessage *)outlookMessage
+- (Message *)messageFromOutlookMessage:(MSOutlookMessage *)outlookMessage
 {
     if (!outlookMessage) {
         return nil;
@@ -81,7 +81,7 @@ NSString * const MessageCategoryIsHiddenOnClient = @"EmailPeek - Hidden";
 
     NSMutableArray *messages = [[NSMutableArray alloc] initWithCapacity:outlookMessages.count];
 
-    for (MSOutlookServicesMessage *outlookMessage in outlookMessages) {
+    for (MSOutlookMessage *outlookMessage in outlookMessages) {
         [messages addObject:[self messageFromOutlookMessage:outlookMessage]];
     }
 
@@ -100,7 +100,7 @@ NSString * const MessageCategoryIsHiddenOnClient = @"EmailPeek - Hidden";
               @"Attachments"] componentsJoinedByString:@","];
 }
 
-- (MessageDetail *)messageDetailFromOutlookMessage:(MSOutlookServicesMessage *)outlookMessage
+- (MessageDetail *)messageDetailFromOutlookMessage:(MSOutlookMessage *)outlookMessage
 {
     if (!outlookMessage) {
         return nil;
@@ -108,26 +108,26 @@ NSString * const MessageCategoryIsHiddenOnClient = @"EmailPeek - Hidden";
 
     return [[MessageDetail alloc] initWithGUID:outlookMessage.Id
                                           body:outlookMessage.Body.Content
-                                    isBodyHTML:outlookMessage.Body.ContentType == MSOutlookServices_BodyType_HTML
+                                    isBodyHTML:outlookMessage.Body.ContentType == MSOutlook_BodyType_HTML
                                     uniqueBody:outlookMessage.UniqueBody.Content
-                              isUniqueBodyHTML:outlookMessage.UniqueBody.ContentType == MSOutlookServices_BodyType_HTML
+                              isUniqueBodyHTML:outlookMessage.UniqueBody.ContentType == MSOutlook_BodyType_HTML
                                    attachments:[self messageAttachmentsFromOutlookAttachments:outlookMessage.Attachments]];
 }
 
 
 #pragma mark - MessageImportance
-- (MessageImportance)messageImportanceFromOutlookImportance:(MSOutlookServicesImportance)outlookImportance
+- (MessageImportance)messageImportanceFromOutlookImportance:(MSOutlookImportance)outlookImportance
 {
     MessageImportance importance;
 
     switch (outlookImportance) {
-        case MSOutlookServices_Importance_Low:
+        case MSOutlook_Importance_Low:
             importance = MessageImportanceLow;
             break;
-        case MSOutlookServices_Importance_Normal:
+        case MSOutlook_Importance_Normal:
             importance = MessageImportanceNormal;
             break;
-        case MSOutlookServices_Importance_High:
+        case MSOutlook_Importance_High:
             importance = MessageImportanceHigh;
             break;
     }
@@ -140,7 +140,7 @@ NSString * const MessageCategoryIsHiddenOnClient = @"EmailPeek - Hidden";
 // Ignored fields
 //   * $$__ODataType
 //   * EmailAddress.$$__ODataType
-- (EmailAddress *)emailAddressFromOutlookRecipient:(MSOutlookServicesRecipient *)outlookRecipient
+- (EmailAddress *)emailAddressFromOutlookRecipient:(MSOutlookRecipient *)outlookRecipient
 {
     if (!outlookRecipient) {
         return nil;
@@ -158,7 +158,7 @@ NSString * const MessageCategoryIsHiddenOnClient = @"EmailPeek - Hidden";
 
     NSMutableArray *emailAddresses = [[NSMutableArray alloc] initWithCapacity:outlookRecipients.count];
 
-    for (MSOutlookServicesRecipient *outlookRecipient in outlookRecipients) {
+    for (MSOutlookRecipient *outlookRecipient in outlookRecipients) {
         [emailAddresses addObject:[self emailAddressFromOutlookRecipient:outlookRecipient]];
     }
 
@@ -171,7 +171,7 @@ NSString * const MessageCategoryIsHiddenOnClient = @"EmailPeek - Hidden";
 //   * $$__ODataType;
 //   * IsInline
 //   * DateTimeLastModified
-- (MessageAttachment *)messageAttachmentFromOutlookAttachment:(MSOutlookServicesAttachment *)outlookAttachment
+- (MessageAttachment *)messageAttachmentFromOutlookAttachment:(MSOutlookAttachment *)outlookAttachment
 {
     if (!outlookAttachment) {
         return nil;
@@ -191,7 +191,7 @@ NSString * const MessageCategoryIsHiddenOnClient = @"EmailPeek - Hidden";
 
     NSMutableArray *attachments = [[NSMutableArray alloc] initWithCapacity:outlookAttachments.count];
 
-    for (MSOutlookServicesAttachment *outlookAttachment in outlookAttachments) {
+    for (MSOutlookAttachment *outlookAttachment in outlookAttachments) {
         [attachments addObject:[self messageAttachmentFromOutlookAttachment:outlookAttachment]];
     }
 

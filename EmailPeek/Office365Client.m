@@ -285,11 +285,11 @@ static const NSUInteger kMessageFetchingPageSize   = 50;
 }
 
 #pragma mark - Mail
-- (void)fetchOutlookClientWithCompletionHandler:(void (^)(MSOutlookServicesClient *outlookClient, NSError *error))completionHandler
+- (void)fetchOutlookClientWithCompletionHandler:(void (^)(MSOutlookClient *outlookClient, NSError *error))completionHandler
 {
     [self fetchClientForService:kOffice365ServiceMail
               completionHandler:^(MSODataBaseContainer *client, NSError *error) {
-                  completionHandler((MSOutlookServicesClient *)client, error);
+                  completionHandler((MSOutlookClient *)client, error);
               }];
 }
 
@@ -372,15 +372,15 @@ static const NSUInteger kMessageFetchingPageSize   = 50;
 {
     NSLog(@"INFO: Fetching messages on page %lu", (unsigned long)pageNumber);
 
-    [self fetchOutlookClientWithCompletionHandler:^(MSOutlookServicesClient *outlookClient, NSError *error) {
+    [self fetchOutlookClientWithCompletionHandler:^(MSOutlookClient *outlookClient, NSError *error) {
         if (!outlookClient) {
             completionHandler(nil, error);
             return;
         }
 
         // NOTE: The call to 'getMessages' will go to the 'Inbox' by default
-        MSOutlookServicesUserFetcher              *userFetcher              = [outlookClient getMe];
-        MSOutlookServicesMessageCollectionFetcher *messageCollectionFetcher = [userFetcher getMessages];
+        MSOutlookUserFetcher              *userFetcher              = [outlookClient getMe];
+        MSOutlookMessageCollectionFetcher *messageCollectionFetcher = [userFetcher getMessages];
 
         [messageCollectionFetcher select:[self.objectTransformer outlookMessageFieldsForMessage]];
         [messageCollectionFetcher filter:filter];
@@ -413,20 +413,20 @@ static const NSUInteger kMessageFetchingPageSize   = 50;
         return;
     }
 
-    [self fetchOutlookClientWithCompletionHandler:^(MSOutlookServicesClient *outlookClient, NSError *error) {
+    [self fetchOutlookClientWithCompletionHandler:^(MSOutlookClient *outlookClient, NSError *error) {
         if (!outlookClient) {
             completionHandler(nil, error);
             return;
         }
 
-        MSOutlookServicesUserFetcher              *userFetcher              = [outlookClient getMe];
-        MSOutlookServicesMessageCollectionFetcher *messageCollectionFetcher = [userFetcher getMessages];
-        MSOutlookServicesMessageFetcher           *messageFetcher           = [messageCollectionFetcher getById:message.guid];
+        MSOutlookUserFetcher              *userFetcher              = [outlookClient getMe];
+        MSOutlookMessageCollectionFetcher *messageCollectionFetcher = [userFetcher getMessages];
+        MSOutlookMessageFetcher           *messageFetcher           = [messageCollectionFetcher getById:message.guid];
 
         [messageFetcher select:[self.objectTransformer outlookMessageFieldsForMessageDetail]];
         [messageFetcher expand:@"Attachments"];
 
-        NSURLSessionTask *task = [messageFetcher readWithCallback:^(MSOutlookServicesMessage *outlookMessage, MSODataException *error) {
+        NSURLSessionTask *task = [messageFetcher readWithCallback:^(MSOutlookMessage *outlookMessage, MSODataException *error) {
             MessageDetail *messageDetail = [self.objectTransformer messageDetailFromOutlookMessage:outlookMessage];
 
             completionHandler(messageDetail, error);
@@ -453,16 +453,16 @@ static const NSUInteger kMessageFetchingPageSize   = 50;
         return;
     }
 
-    [self fetchOutlookClientWithCompletionHandler:^(MSOutlookServicesClient *outlookClient, NSError *error) {
+    [self fetchOutlookClientWithCompletionHandler:^(MSOutlookClient *outlookClient, NSError *error) {
         if (!outlookClient) {
             completionHandler(NO, error);
             return;
         }
 
-        MSOutlookServicesUserFetcher              *userFetcher              = [outlookClient getMe];
-        MSOutlookServicesMessageCollectionFetcher *messageCollectionFetcher = [userFetcher getMessages];
-        MSOutlookServicesMessageFetcher           *messageFetcher           = [messageCollectionFetcher getById:message.guid];
-        MSOutlookServicesMessageOperations        *messageOperations        = [messageFetcher operations];
+        MSOutlookUserFetcher              *userFetcher              = [outlookClient getMe];
+        MSOutlookMessageCollectionFetcher *messageCollectionFetcher = [userFetcher getMessages];
+        MSOutlookMessageFetcher           *messageFetcher           = [messageCollectionFetcher getById:message.guid];
+        MSOutlookMessageOperations        *messageOperations        = [messageFetcher operations];
 
         NSURLSessionTask *task;
 
@@ -619,15 +619,15 @@ static const NSUInteger kMessageFetchingPageSize   = 50;
     NSString *jsonPayloadAsString = [[NSString alloc] initWithData:jsonPayload
                                                           encoding:NSUTF8StringEncoding];
 
-    [self fetchOutlookClientWithCompletionHandler:^(MSOutlookServicesClient *outlookClient, NSError *error) {
+    [self fetchOutlookClientWithCompletionHandler:^(MSOutlookClient *outlookClient, NSError *error) {
         if (!outlookClient) {
             completionHandler(nil, error);
             return;
         }
 
-        MSOutlookServicesUserFetcher              *userFetcher              = [outlookClient getMe];
-        MSOutlookServicesMessageCollectionFetcher *messageCollectionFetcher = [userFetcher getMessages];
-        MSOutlookServicesMessageFetcher           *messageFetcher           = [messageCollectionFetcher getById:message.guid];
+        MSOutlookUserFetcher              *userFetcher              = [outlookClient getMe];
+        MSOutlookMessageCollectionFetcher *messageCollectionFetcher = [userFetcher getMessages];
+        MSOutlookMessageFetcher           *messageFetcher           = [messageCollectionFetcher getById:message.guid];
 
         [messageFetcher select:self.objectTransformer.outlookMessageFieldsForMessage];
 
@@ -645,8 +645,8 @@ static const NSUInteger kMessageFetchingPageSize   = 50;
                                                               id<MSODataDependencyResolver> resolver       = [messageFetcher resolver];
                                                               id<MSODataJsonSerializer>     jsonSerializer = [resolver jsonSerializer];
 
-                                                              MSOutlookServicesMessage *updatedOutlookMessage = [jsonSerializer deserialize:responseData
-                                                                                                                                    asClass:[MSOutlookServicesMessage class]];
+                                                              MSOutlookMessage *updatedOutlookMessage = [jsonSerializer deserialize:responseData
+                                                                                                                                    asClass:[MSOutlookMessage class]];
 
                                                               Message *message = [self.objectTransformer messageFromOutlookMessage:updatedOutlookMessage];
 
@@ -680,7 +680,7 @@ static const NSUInteger kMessageFetchingPageSize   = 50;
 - (Class)clientClassForService:(NSString *)serviceName
 {
     if ([serviceName isEqualToString:kOffice365ServiceDiscovery]) { return [MSDiscoveryClient class]; }
-    if ([serviceName isEqualToString:kOffice365ServiceMail]     ) { return [MSOutlookServicesClient   class]; }
+    if ([serviceName isEqualToString:kOffice365ServiceMail]     ) { return [MSOutlookClient   class]; }
 
     return nil;
 }
