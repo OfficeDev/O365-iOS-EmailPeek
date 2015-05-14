@@ -50,8 +50,8 @@ The Email Peek app already contains a podfile that will get the Office 365 and A
 
 target ‘O365-iOS-EmailPeek’ do
 pod 'ADALiOS',   '~> 1.2.1'
-pod 'Office365/Outlook', '= 0.9.0'
-pod 'Office365/Discovery', '= 0.9.0'
+pod 'Office365/Outlook', '= 0.9.1'
+pod 'Office365/Discovery', '= 0.9.1'
 end
 
 
