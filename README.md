@@ -2,6 +2,8 @@
 
 Email Peek is a cool mail app built using the Office 365 APIs on the iOS platform. This app allows you to peek at just the email conversations you truly care about when you are away, such as when you are on vacation. Email Peek also makes it easy for you to send quick replies to messages without typing. This app uses many of the features of the Office 365 Mail API such as read/write, server-side filtering, and categories.
 
+[![Office 365 iOS Email Peek](/readme-images/emailpeek_video.png)](https://youtu.be/WqEqxKD6Bfw "Click to see the sample in action")
+
 **Table of contents**
 
 * [Set up your environment](#set-up-your-environment)
@@ -133,6 +135,7 @@ Questions about Office 365 development in general should be posted to [Stack Ove
 * [Office 365 APIs documentation](http://msdn.microsoft.com/office/office365/howto/platform-development-overview)
 * [Office 365 API code samples and videos](https://msdn.microsoft.com/office/office365/howto/starter-projects-and-code-samples)
 * [Office Dev Center](http://dev.office.com/)
+* [Medium article on Email Peek](https://medium.com/office-app-development/why-read-email-when-you-can-peek-2af947d352dc)
 
 ## Copyright
 
