@@ -1,4 +1,5 @@
 #Email Peek - An iOS app built using Office 365#
+[![Build Status](https://travis-ci.org/OfficeDev/O365-iOS-EmailPeek.svg)](https://travis-ci.org/OfficeDev/O365-iOS-EmailPeek)
 
 Email Peek is a cool mail app built using the Office 365 APIs on the iOS platform. This app allows you to peek at just the email conversations you truly care about when you are away, such as when you are on vacation. Email Peek also makes it easy for you to send quick replies to messages without typing. This app uses many of the features of the Office 365 Mail API such as read/write, server-side filtering, and categories.
 
@@ -32,12 +33,12 @@ To run Email Peek, you need the following:
 
 Once you have an Office 365 account and an Azure AD account that is bound to your Office 365 Developer site, you'll need to perform the following steps:
 
-1. Register your application with Azure, and configure the appropriate Office 365 Exchange Online permissions. 
-2. Install and use CocoaPods to get the Office 365 and ADAL authentication dependencies into your project. 
+1. Register your application with Azure, and configure the appropriate Office 365 Exchange Online permissions.
+2. Install and use CocoaPods to get the Office 365 and ADAL authentication dependencies into your project.
 3. Enter the Azure app registration specifics (ClientID and RedirectUri) into the Email Peel app.
 
 ## Use CocoaPods to import the O365 iOS SDK
-Note: If you've never used **CocoaPods** before as a dependency manager you'll have to install it prior to getting your Office 365 iOS SDK dependencies into your project. 
+Note: If you've never used **CocoaPods** before as a dependency manager you'll have to install it prior to getting your Office 365 iOS SDK dependencies into your project.
 
 Enter the next two lines of code from the **Terminal** app on your Mac.
 
@@ -98,7 +99,7 @@ static NSString * const kAuthorityURLString = @"https://login.microsoftonline.co
 
 **Models**
 
-These domain entities are custom classes that represent the data of the application. All of these classes are immutable.  They wrap the basic entities provided by the Office 365 SDK. 
+These domain entities are custom classes that represent the data of the application. All of these classes are immutable.  They wrap the basic entities provided by the Office 365 SDK.
 
 **Office365 Helpers**
 
@@ -106,11 +107,11 @@ The helpers are the classes that actually communicate with Office 365 by making 
 
 **Office365 Server Side Filters**
 
-These classes help make the appropriate API call with the correct Office 365 server-side filter clauses during fetch. 
+These classes help make the appropriate API call with the correct Office 365 server-side filter clauses during fetch.
 
 **ConversationManager and SettingsManager**
 
-These classes help manage conversations and settings in the app. 
+These classes help manage conversations and settings in the app.
 
 **Controllers**
 
@@ -118,7 +119,7 @@ These are the controllers for the different views supported by Email Peek.
 
 **Views**
 
-This implements a custom cell which is used in two different places, in the ConversationListViewController and ConversationViewController. 
+This implements a custom cell which is used in two different places, in the ConversationListViewController and ConversationViewController.
 
 
 ## Questions and comments
