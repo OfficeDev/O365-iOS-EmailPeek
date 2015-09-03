@@ -1,9 +1,15 @@
 language: objective-c
-
 before_install:
-  - gem install cocoapods
-  - brew update
-  - if brew outdated | grep -qx xctool; then brew upgrade xctool; fi
-
+- gem install cocoapods
+- brew update
+- if brew outdated | grep -qx xctool; then brew upgrade xctool; fi
 script:
-  - xctool -workspace EmailPeek.xcworkspace -scheme EmailPeek -sdk iphonesimulator
+- xctool -workspace EmailPeek.xcworkspace -scheme EmailPeek -sdk iphonesimulator
+notifications:
+  slack:
+    secure: MMzMQpLUr1pbKLNUek+5q4Z1SROBeGgr+kyP6MeSywTFRODKISt+nBEK2betlZ/Qc8i+tz/iOPOik8W71ijg5vWUygGBEyZjng72H9MwTV46bzAKWC5uHR7pf4sZmlsmZ4iEp9hXxmS6MDqUL/YkK2Dwa1xzgYPeSmF4Nr3Cm/0=
+  email:
+    recipients:
+    - jak@microsoft.com
+    on_success: never
+    on_failure: always
