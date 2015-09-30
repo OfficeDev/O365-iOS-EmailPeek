@@ -13,6 +13,7 @@ Email Peek is a cool mail app built using the Office 365 APIs on the iOS platfor
 * [Get the Client ID and Redirect Uri into the project](#get-the-client-id-and-redirect-uri-into-the-project)
 * [Important code files](#code-of-interest)
 * [Questions and comments](#questions-and-comments)
+* [Troubleshooting](#troubleshooting)
 * [Additional resources](#additional-resources)
 
 
@@ -127,6 +128,16 @@ This implements a custom cell which is used in two different places, in the Conv
 We'd love to get your feedback on the Email Peek app sample. You can send your feedback to us in the [Issues](https://github.com/OfficeDev/O365-EmailPeek-iOS) section of this repository. <br>
 <br>
 Questions about Office 365 development in general should be posted to [Stack Overflow](http://stackoverflow.com/questions/tagged/Office365+API). Please tag your questions are tagged with [Office365] and [API].
+
+## Troubleshooting
+With the Xcode 7.0 update, App Transport Security is enabled for simulators and devices running iOS 9. See [App Transport Security Technote](https://developer.apple.com/library/prerelease/ios/technotes/App-Transport-Security-Technote/).
+
+For this sample we have created a temporary exception for the following domain in the plist:
+
+- outlook.office365.com
+
+If these exceptions are not included, all calls into the Office 365 API will fail in this app when deployed to an iOS 9 simulator in Xcode.
+
 
 ## Additional resources
 
