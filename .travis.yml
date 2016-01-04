@@ -1,8 +1,7 @@
 language: objective-c
-before_install:
-- gem install cocoapods
-- brew update
-- if brew outdated | grep -qx xctool; then brew upgrade xctool; fi
+osx_image: xcode7
+xcode_workspace: EmailPeek.xcworkspace
+xcode_scheme: EmailPeek
 script:
 - xctool -workspace EmailPeek.xcworkspace -scheme EmailPeek -sdk iphonesimulator
 notifications:
