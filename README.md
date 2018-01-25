@@ -1,11 +1,11 @@
-#Email Peek - An iOS app built using Office 365 #
+# Email Peek - An iOS app built using Office 365 
 [![Build Status](https://travis-ci.org/OfficeDev/O365-iOS-EmailPeek.svg)](https://travis-ci.org/OfficeDev/O365-iOS-EmailPeek)
 
 Email Peek is a cool mail app built using the Office 365 APIs on the iOS platform. This app allows you to peek at just the email conversations you truly care about when you are away, such as when you are on vacation. Email Peek also makes it easy for you to send quick replies to messages without typing. This app uses many of the features of the Office 365 Mail API such as read/write, server-side filtering, and categories.
 
 [![Office 365 iOS Email Peek](/readme-images/emailpeek_video.png)](https://youtu.be/WqEqxKD6Bfw "Click to see the sample in action")
 
-**Table of contents**
+## Table of contents
 
 * [Set up your environment](#set-up-your-environment)
 * [Use CocoaPods to import the O365 iOS SDK](#use-cocoapods-to-import-the-o365-ios-sdk)
@@ -18,7 +18,7 @@ Email Peek is a cool mail app built using the Office 365 APIs on the iOS platfor
 
 
 
-## Set up your environment ##
+## Set up your environment 
 
 To run Email Peek, you need the following:
 
@@ -39,32 +39,31 @@ Once you have an Office 365 account and an Azure AD account that is bound to you
 3. Enter the Azure app registration specifics (ClientID and RedirectUri) into the Email Peel app.
 
 ## Use CocoaPods to import the O365 iOS SDK
-Note: If you've never used **CocoaPods** before as a dependency manager you'll have to install it prior to getting your Office 365 iOS SDK dependencies into your project.
+>**Note** If you've never used **CocoaPods** before as a dependency manager you'll have to install it prior to getting your Office 365 iOS SDK dependencies into your project.
 
 Enter the next two lines of code from the **Terminal** app on your Mac.
 
-sudo gem install cocoapods
-pod setup
+    sudo gem install cocoapods
+    pod setup
 
 If the install and setup are successful, you should see the message **Setup completed in Terminal**. For more information on CocoaPods, and its usage, see [CocoaPods](https://cocoapods.org/).
 
 
 **Get the Office 365 SDK for iOS dependencies in your project**
-The Email Peek app already contains a podfile that will get the Office 365 and ADAL components (pods) into your project. It's located in the sample root ("Podfile"). The example shows the contents of the file.
+The Email Peek app already contains a podfile that will get the Office 365 and ADAL components (pods) into your project. It's located in the sample root ("Podfile"). The following example shows the contents of the file.
 
-target ‘O365-iOS-EmailPeek’ do
-pod 'ADALiOS',   '~> 1.2.1'
-pod 'Office365/Outlook', '= 0.9.1'
-pod 'Office365/Discovery', '= 0.9.1'
-end
+    target ‘O365-iOS-EmailPeek’ do
+    pod 'ADALiOS',   '~> 1.2.1'
+    pod 'Office365/Outlook', '= 0.9.1'
+    pod 'Office365/Discovery', '= 0.9.1'
+    end
 
 
 You'll simply need to navigate to the project directory in the **Terminal** (root of the project folder) and run the following command.
 
+    pod install
 
-pod install
-
-Note: You should receive confirmation that these dependencies have been added to the project and that you must open the workspace instead of the project from now on in Xcode (**O365-iOS-EmailPeek.xcworkspace**).  If there is a syntax error in the Podfile, you will encounter an error when you run the install command.
+>**Note** You should receive confirmation that these dependencies have been added to the project and that you must open the workspace instead of the project from now on in Xcode (**O365-iOS-EmailPeek.xcworkspace**).  If there is a syntax error in the Podfile, you will encounter an error when you run the install command.
 
 ## Register your app with Microsoft Azure
 1.	Sign in to the [Azure Management Portal](https://manage.windowsazure.com), using your Azure AD credentials.
@@ -83,15 +82,15 @@ Note: You should receive confirmation that these dependencies have been added to
 
 ## Get the Client ID and Redirect Uri into the project
 
-Finally you'll need to add the Client ID and Redirect Uri you recorded from the previous section **Register your app with Microsoft Azure**.
+You'll need to add the Client ID and Redirect Uri you recorded from the previous section **Register your app with Microsoft Azure**.
 
 Browse the **O365-iOS-EmailPeek** project directory and open up the workspace (O365-EmailPeek-iOS.xcworkspace). In the **AppDelegate.m** file you'll see that the **ClientID** and **RedirectUri** values can be added to the top of the file. Supply the necessary values in this file.
 
-// You will set your application's clientId and redirect URI. You get
-// these when you register your application in Azure AD.
-static NSString * const kClientId           = @"ENTER_REDIRECT_URI_HERE";
-static NSString * const kRedirectURLString  = @"ENTER_CLIENT_ID_HERE";
-static NSString * const kAuthorityURLString = @"https://login.microsoftonline.com/common";
+    // You will set your application's clientId and redirect URI. You get
+    // these when you register your application in Azure AD.
+    static NSString * const kClientId           = @"ENTER_REDIRECT_URI_HERE";
+    static NSString * const kRedirectURLString  = @"ENTER_CLIENT_ID_HERE";
+    static NSString * const kAuthorityURLString = @"https://login.microsoftonline.com/common";
 
 
 
@@ -125,8 +124,8 @@ This implements a custom cell which is used in two different places, in the Conv
 
 ## Questions and comments
 
-We'd love to get your feedback on the Email Peek app sample. You can send your feedback to us in the [Issues](https://github.com/OfficeDev/O365-EmailPeek-iOS) section of this repository. <br>
-<br>
+We'd love to get your feedback on the Email Peek app sample. You can send your feedback to us in the [Issues](https://github.com/OfficeDev/O365-EmailPeek-iOS) section of this repository. 
+
 Questions about Office 365 development in general should be posted to [Stack Overflow](http://stackoverflow.com/questions/tagged/Office365+API). Please tag your questions are tagged with [Office365] and [API].
 
 ## Troubleshooting
