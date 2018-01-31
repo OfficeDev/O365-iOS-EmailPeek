@@ -1,0 +1,19 @@
+### YamlMime:Sample
+sample:
+- name: Email Peek - An iOS app built using Office 365
+  path: ''
+  description: Email Peek is a cool mail app built using the Office 365 APIs on the iOS platform. This app uses many of the features of the Office 365 Mail API such as read/write, server-side filtering, and categories.
+  readme: ''
+  generateZip: FALSE
+  isLive: TRUE
+  technologies:
+  - Office Add-in
+  azureDeploy: ''
+  author: davidchesnut
+  platforms: []
+  languages:
+  - Objective-C
+  extensions:
+    products:
+    - Office 365
+    scenarios: []
