@@ -1,15 +1,12 @@
 ---
 topic: sample
 products:
-- Outlook
 - Office 365
 languages:
 - Objective-C
 extensions:
   contentType: samples
-  createdDate: 2/26/2015 2:49:40 PM
-  scenarios:
-  - Mobile
+  createdDate: 4/27/2015 2:02:28 PM
 ---
 #Email Peek - An iOS app built using Office 365 #
 [![Build Status](https://travis-ci.org/OfficeDev/O365-iOS-EmailPeek.svg)](https://travis-ci.org/OfficeDev/O365-iOS-EmailPeek)
