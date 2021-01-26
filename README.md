@@ -1,18 +1,7 @@
----
-page_type: sample
-products:
-- office-outlook
-- office-365
-languages:
-- objc
-extensions:
-  contentType: samples
-  createdDate: 2/26/2015 2:49:40 PM
-  scenarios:
-  - Mobile
----
-#Email Peek - An iOS app built using Office 365 #
+# [ARCHIVED] Email Peek - An iOS app built using Office 365 #
 [![Build Status](https://travis-ci.org/OfficeDev/O365-iOS-EmailPeek.svg)](https://travis-ci.org/OfficeDev/O365-iOS-EmailPeek)
+
+**Note:** This repo is archived and no longer actively maintained. Security vulnerabilities may exist in the project, or its dependencies. If you plan to reuse or run any code from this repo, be sure to perform appropriate security checks on the code or dependencies first. Do not use this project as the starting point of a production Office Add-in. Always start your production code by using the Office/SharePoint development workload in Visual Studio, or the [Yeoman generator for Office Add-ins](https://github.com/OfficeDev/generator-office), and follow security best practices as you develop the add-in.
 
 Email Peek is a cool mail app built using the Office 365 APIs on the iOS platform. This app allows you to peek at just the email conversations you truly care about when you are away, such as when you are on vacation. Email Peek also makes it easy for you to send quick replies to messages without typing. This app uses many of the features of the Office 365 Mail API such as read/write, server-side filtering, and categories.
 
